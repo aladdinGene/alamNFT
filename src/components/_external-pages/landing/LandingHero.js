@@ -7,7 +7,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import { experimentalStyled as styled } from '@material-ui/core/styles';
 import { Button, Box, Link, Container, Typography, Stack, Grid, useMediaQuery, useTheme } from '@material-ui/core';
 //
-import { varFadeIn, varWrapEnter, varFadeInRight } from '../../animate';
+import { varFadeIn, varFadeInRight } from '../../animate';
 
 // ----------------------------------------------------------------------
 
@@ -21,14 +21,14 @@ const RootStyle = styled(motion.div)(({ theme }) => ({
     top: 0,
     left: 0,
     width: '100%',
-    height: '100vh',
+    // height: '100vh',
     display: 'flex',
-    position: 'fixed',
+    // position: 'fixed',
     alignItems: 'center'
   }
 }));
 
-const HeroOverlayDivStyle = styled(motion.div)({
+const HeroOverlayDiv1Style = styled(motion.div)({
   zIndex: 9,
   width: '100%',
   height: '100%',
@@ -41,6 +41,18 @@ const HeroOverlayDivStyle = styled(motion.div)({
   opacity: '0.2 !important'
 });
 
+const HeroOverlayDiv2Style = styled(motion.div)({
+  zIndex: 9,
+  objectFit: 'cover',
+  position: 'absolute',
+  background: 'linear-gradient(358deg, #ffffffdd, #ffffffcc, #ffffff00)',
+  opacity: '1 !important',
+  top: 0,
+  bottom: '-20px',
+  left: 0,
+  right: 0
+});
+
 // ----------------------------------------------------------------------
 
 export default function LandingHero() {
@@ -50,8 +62,8 @@ export default function LandingHero() {
   const GridStyle = styled((props) => <Grid container spacing={isDesktop ? 10 : 5} {...props} />)(({ theme }) => ({
     zIndex: 10,
     position: 'relative',
-    paddingTop: theme.spacing(15),
-    paddingBottom: theme.spacing(15),
+    paddingTop: theme.spacing(20),
+    paddingBottom: theme.spacing(0),
     [theme.breakpoints.down('md')]: {
       maxWidth: '550px',
       marginLeft: 'calc(50% - 295px)'
@@ -64,9 +76,10 @@ export default function LandingHero() {
   }));
   return (
     <>
-      <RootStyle initial="initial" animate="animate" variants={varWrapEnter}>
+      <RootStyle>
         {/* <HeroOverlayStyle alt="overlay" src="/static/overlay.svg" variants={varFadeIn} /> */}
-        <HeroOverlayDivStyle variants={varFadeIn} />
+        <HeroOverlayDiv1Style variants={varFadeIn} />
+        <HeroOverlayDiv2Style variants={varFadeIn} />
 
         {/* <HeroImgStyle alt="hero" src="/static/home/hero.png" variants={varFadeInUp} /> */}
 
@@ -162,7 +175,7 @@ export default function LandingHero() {
           </GridStyle>
         </Container>
       </RootStyle>
-      <Box sx={{ height: { md: '100vh' } }} />
+      {/* <Box sx={{ height: { md: '100vh' } }} /> */}
     </>
   );
 }

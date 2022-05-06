@@ -1,6 +1,6 @@
 // material
 import { alpha, useTheme, experimentalStyled as styled } from '@material-ui/core/styles';
-import { Box, Grid, Card, Container, Typography, useMediaQuery } from '@material-ui/core';
+import { Box, Grid, Card, Container, Typography } from '@material-ui/core';
 //
 import { varFadeInUp, MotionInView, varFadeInDown } from '../../animate';
 
@@ -38,7 +38,7 @@ const shadowIcon = (color) => `drop-shadow(2px 2px 2px ${alpha(color, 0.48)})`;
 const RootStyle = styled('div')(({ theme }) => ({
   paddingTop: theme.spacing(15),
   [theme.breakpoints.up('md')]: {
-    paddingBottom: theme.spacing(15)
+    paddingBottom: theme.spacing(0)
   }
 }));
 
@@ -50,16 +50,20 @@ const CardStyle = styled(Card)(({ theme }) => {
 
   return {
     maxWidth: 380,
-    minHeight: 440,
     margin: 'auto',
     textAlign: 'center',
-    padding: theme.spacing(10, 5, 0),
+    padding: theme.spacing(1, 2, 0),
     boxShadow: `-40px 40px 80px 0 ${shadowCard(0.48)}`,
+    paddingBottom: theme.spacing(3),
     [theme.breakpoints.up('md')]: {
       boxShadow: 'none',
       backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800]
     },
+    [theme.breakpoints.down('md')]: {
+      marginBottom: theme.spacing(2)
+    },
     '&.cardLeft': {
+      minHeight: 340,
       [theme.breakpoints.up('md')]: { marginTop: -40 }
     },
     '&.cardCenter': {
@@ -91,7 +95,7 @@ const CardIconStyle = styled('img')(({ theme }) => ({
   width: 40,
   height: 40,
   margin: 'auto',
-  marginBottom: theme.spacing(10),
+  marginBottom: theme.spacing(5),
   filter: shadowIcon(theme.palette.primary.main)
 }));
 
@@ -100,20 +104,19 @@ const CardIconStyle = styled('img')(({ theme }) => ({
 export default function LandingHugePackElements() {
   const theme = useTheme();
   const isLight = theme.palette.mode === 'light';
-  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
     <RootStyle>
       <Container maxWidth="lg">
-        <Box sx={{ mb: 10 }}>
+        <Box sx={{ mb: 5 }}>
           <MotionInView variants={varFadeInDown}>
-            <Typography variant="h2" sx={{ textAlign: 'center' }}>
+            <Typography variant="h4" sx={{ textAlign: 'center' }} color={theme.palette.grey[900]}>
               Create and sell your NFTs
             </Typography>
           </MotionInView>
         </Box>
 
-        <Grid container spacing={isDesktop ? 10 : 5}>
+        <Grid container>
           {CARDS.map((card, index) => (
             <Grid key={card.title} item xs={12} md={6} lg={3}>
               <MotionInView variants={varFadeInUp}>

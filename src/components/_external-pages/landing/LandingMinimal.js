@@ -64,36 +64,11 @@ const CardStyle = styled(Card)(({ theme }) => {
     maxWidth: 380,
     margin: 'auto',
     textAlign: 'center',
-    padding: theme.spacing(10, 5, 0),
+    padding: theme.spacing(2, 2, 0),
     boxShadow: `-40px 40px 80px 0 ${shadowCard(0.48)}`,
     [theme.breakpoints.up('md')]: {
       boxShadow: 'none',
       backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800]
-    },
-    '&.cardLeft': {
-      [theme.breakpoints.up('md')]: { marginTop: -40 }
-    },
-    '&.cardCenter': {
-      [theme.breakpoints.up('md')]: {
-        marginTop: -80,
-        backgroundColor: theme.palette.background.paper,
-        boxShadow: `-40px 40px 80px 0 ${shadowCard(0.4)}`,
-        '&:before': {
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: -1,
-          content: "''",
-          margin: 'auto',
-          position: 'absolute',
-          width: 'calc(100% - 40px)',
-          height: 'calc(100% - 40px)',
-          borderRadius: theme.shape.borderRadiusMd,
-          backgroundColor: theme.palette.background.paper,
-          boxShadow: `-20px 20px 40px 0 ${shadowCard(0.12)}`
-        }
-      }
     }
   };
 });
@@ -102,7 +77,9 @@ const CardIconStyle = styled('img')(({ theme }) => ({
   width: '100%',
   margin: 'auto',
   marginBottom: theme.spacing(1),
-  filter: shadowIcon(theme.palette.primary.main)
+  borderTopRightRadius: theme.spacing(1),
+  borderTopLeftRadius: theme.spacing.apply(1),
+  filter: 'none'
 }));
 
 // ----------------------------------------------------------------------
@@ -114,20 +91,27 @@ export default function LandingMinimalHelps() {
   return (
     <RootStyle>
       <Container maxWidth="lg">
-        <Box sx={{ mb: { xs: 10, md: 25 } }}>
+        <Box mb={3}>
           <MotionInView variants={varFadeInDown}>
-            <Typography variant="h2" sx={{ textAlign: 'center' }}>
+            <Typography variant="h4" sx={{ textAlign: 'center', color: theme.palette.grey[900] }}>
               Browse by category
             </Typography>
           </MotionInView>
         </Box>
 
-        <Grid container spacing={isDesktop ? 10 : 5}>
+        <Grid container spacing={isDesktop ? 1 : 1}>
           {CARDS.map((card, index) => (
             <Grid key={card.title} item xs={12} md={4}>
               <MotionInView variants={varFadeInUp}>
-                <Link href="#" underline="none">
-                  <CardStyle className={(index % 3 === 0 && 'cardLeft') || (index % 3 === 1 && 'cardCenter')}>
+                <Link
+                  href="#"
+                  underline="none"
+                  sx={{
+                    '&>div': { border: 'solid 2px transparent', borderRadius: theme.spacing(1) },
+                    '&:hover>div': { borderColor: '#CCC' }
+                  }}
+                >
+                  <CardStyle>
                     <CardIconStyle
                       src={card.icon}
                       alt={card.title}
@@ -140,7 +124,7 @@ export default function LandingMinimalHelps() {
                         })
                       }}
                     />
-                    <Typography variant="h5" paragraph pb={2}>
+                    <Typography variant="h5" paragraph pb={1} pt={1}>
                       {card.title}
                     </Typography>
                   </CardStyle>

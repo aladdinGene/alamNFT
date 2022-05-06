@@ -7,8 +7,6 @@ import {
   LandingMinimal,
   LandingHugePackElements,
   LandingCategoryCarousel,
-  LandingHotItems,
-  LandingTopSellers,
   LandingSolana,
   LandingTopCollections,
   LandingTrending
@@ -31,16 +29,14 @@ const ContentStyle = styled('div')(({ theme }) => ({
 export default function LandingPage() {
   return (
     <RootStyle title="The starting point for your next project | Minimal-UI" id="move_top">
-      <LandingHero />
       <ContentStyle>
+        <LandingHero />
         <LandingSolana />
         <LandingCategoryCarousel />
         <LandingTopCollections />
         <LandingTrending />
-        <LandingHotItems />
-        <LandingTopSellers />
-        <LandingMinimal />
         <LandingHugePackElements />
+        <LandingMinimal />
       </ContentStyle>
     </RootStyle>
   );

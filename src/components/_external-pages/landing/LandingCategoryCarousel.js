@@ -178,8 +178,9 @@ export default function LandingCategoryCarousel() {
   return (
     
     <Container maxWidth="lg">
-      <Box sx={{ mt: { xs: 10, md: 15 } }}>
+      <Box sx={{ mt: { xs: 5, md: 10 } }}>
         <RootStyle>
+          <Typography variant="h4" color={theme.palette.grey[900]} textAlign="center" mb={5}>Notable Drops</Typography>
             <Slider ref={carouselRef} {...settings}>
                 {CAROUSELS.map((item) => (
                   <CarouselItem key={item.title} item={item} />
