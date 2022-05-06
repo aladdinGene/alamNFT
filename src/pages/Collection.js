@@ -1,13 +1,12 @@
 /* eslint-disable prettier/prettier */
 // material
-import { useState } from 'react';
 import { experimentalStyled as styled } from '@material-ui/core/styles';
 import VerifiedIcon from '@material-ui/icons/Verified';
 import SegmentIcon from '@material-ui/icons/Segment';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import WebAssetIcon from '@material-ui/icons/WebAsset';
 import { Link as RouterLink } from 'react-router-dom';
-import { Box, Container, Typography, Stack, Button, Link } from '@material-ui/core';
+import { Box, Container, Typography, Stack, Link } from '@material-ui/core';
 //
 import { MotionInView, varFadeInDown } from '../components/animate';
 
@@ -36,32 +35,6 @@ const BannerStyle = styled('div')(() => ({
         left: 0
     }
 }));
-
-const LinkStyle = styled(Link)(({ theme }) => ({
-    ...theme.typography.subtitle2,
-    color: theme.palette.text.primary,
-    maxWidth: 800,
-    display: 'flex',
-    justifyContent: 'space-between',
-    margin: 'auto',
-    border: 'solid 1px transparent',
-    padding: '20px 10px',
-    cursor: 'pointer',
-    transition: theme.transitions.create('opacity', {
-      duration: theme.transitions.duration.shortest
-    }),
-    '&:hover': {
-      border: 'solid 1px #CCC',
-      textDecoration: 'none'
-    }
-  }));
-
-const StyledButton = styled(Button)(() => ({
-    maxWidth: 800,
-    display: 'block',
-    margin: 'auto',
-    width: '100%'
-}))
 
 
 // ----------------------------------------------------------------------

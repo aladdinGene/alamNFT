@@ -5,29 +5,9 @@ import { useState, useEffect } from 'react';
 import { NavLink as RouterLink, useLocation } from 'react-router-dom';
 import arrowIosUpwardFill from '@iconify/icons-eva/arrow-ios-upward-fill';
 import arrowIosDownwardFill from '@iconify/icons-eva/arrow-ios-downward-fill';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import YouTubeIcon from '@material-ui/icons/YouTube';
-import redditCircleFilled from '@iconify/icons-ant-design/reddit-circle-fill';
-import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 // material
 import { experimentalStyled as styled } from '@material-ui/core/styles';
-import {
-  Box,
-  Link,
-  Grid,
-  List,
-  Stack,
-  Popover,
-  ListItem,
-  ListSubheader,
-  CardActionArea,
-  Drawer,
-  Divider,
-  IconButton,
-  Typography,
-  Button
-} from '@material-ui/core';
+import { Box, Link, Grid, List, Stack, Popover, ListItem, ListSubheader, CardActionArea } from '@material-ui/core';
 import MoreDrawer from './MoreDrawer';
 
 // ----------------------------------------------------------------------
@@ -41,23 +21,6 @@ const LinkStyle = styled(Link)(({ theme }) => ({
   }),
   '&:hover': {
     opacity: 0.48,
-    textDecoration: 'none'
-  }
-}));
-
-const BoxStyle = styled(Box)(() => ({
-  width: 130,
-  height: 130,
-  borderRadius: 5,
-  color: '#FFF',
-  display: 'flex',
-  flexDirection: 'column',
-  justifyContent: 'end',
-  alignItems: 'start',
-  cursor: 'pointer',
-  padding: 10,
-  '&:hover': {
-    opacity: 0.9,
     textDecoration: 'none'
   }
 }));

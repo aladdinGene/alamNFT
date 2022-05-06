@@ -1,16 +1,11 @@
 /* eslint-disable prettier/prettier */
-import faker from 'faker';
 import { useRef } from 'react';
 import Slider from 'react-slick';
 import PropTypes from 'prop-types';
-import { Icon } from '@iconify/react';
 import { Link as RouterLink } from 'react-router-dom';
-import arrowForwardFill from '@iconify/icons-eva/arrow-forward-fill';
 // material
 import { alpha, useTheme, experimentalStyled as styled } from '@material-ui/core/styles';
 import { Box, Paper, Container, Typography, CardContent, Link } from '@material-ui/core';
-// utils
-import { mockImgFeed } from '../../../utils/mockImages';
 //
 import { CarouselControlsArrowsBasic2 } from '../../carousel/controls';
 

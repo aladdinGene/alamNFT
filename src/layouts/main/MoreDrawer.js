@@ -24,7 +24,6 @@ import {
   ListItemText,
   ListItemIcon
 } from '@material-ui/core';
-import useOffSetTop from '../../hooks/useOffSetTop';
 
 // ----------------------------------------------------------------------
 
@@ -58,7 +57,6 @@ const BoxStyle = styled(Box)(() => ({
   }
 }));
 
-const ICON_SIZE = 22;
 const ITEM_SIZE = 48;
 const PADDING = 2.5;
 

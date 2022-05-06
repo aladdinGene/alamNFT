@@ -1,11 +1,8 @@
 import { Icon } from '@iconify/react';
 import homeFill from '@iconify/icons-eva/home-fill';
 import roundGrain from '@iconify/icons-ic/round-grain';
-import SearchIcon from '@material-ui/icons/Search';
 import MenuOpenOutlinedIcon from '@material-ui/icons/MenuOpenOutlined';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
-// routes
-import { PATH_PAGE } from '../../routes/paths';
 
 // ----------------------------------------------------------------------
 

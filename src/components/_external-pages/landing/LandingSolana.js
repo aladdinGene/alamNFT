@@ -1,16 +1,12 @@
 /* eslint-disable prettier/prettier */
-import { Icon } from '@iconify/react';
 import { motion } from 'framer-motion';
-import flashFill from '@iconify/icons-eva/flash-fill';
-import PlayCircleFilledWhiteIcon from '@material-ui/icons/PlayCircleFilledWhite';
 import { Link as RouterLink } from 'react-router-dom';
 // material
 import { experimentalStyled as styled } from '@material-ui/core/styles';
-import { Button, Box, Link, Container, Typography, Stack, Grid, useMediaQuery, useTheme } from '@material-ui/core';
+import { Button, Container, Typography, Stack, Grid, useTheme } from '@material-ui/core';
 // routes
-import { PATH_DASHBOARD } from '../../../routes/paths';
 //
-import { varFadeIn, varFadeInUp, varWrapEnter, varFadeInRight } from '../../animate';
+import { varWrapEnter } from '../../animate';
 
 // ----------------------------------------------------------------------
 
@@ -23,7 +19,6 @@ const RootStyle = styled(motion.div)(({ theme }) => ({
 
 export default function LandingSolana() {
   const theme = useTheme();
-  const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
   const GridStyle = styled((props) => <Grid container {...props} />)(({ theme }) => ({
     // zIndex: 10,
     // position: 'relative',

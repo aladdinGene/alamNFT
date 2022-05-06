@@ -1,8 +1,8 @@
-import { NavLink as RouterLink, useLocation } from 'react-router-dom';
+import { NavLink as RouterLink } from 'react-router-dom';
 import { useState } from 'react';
 // material
 import { experimentalStyled as styled } from '@material-ui/core/styles';
-import { Box, Button, AppBar, Toolbar, Container, Stack, Paper, IconButton, InputBase } from '@material-ui/core';
+import { Box, AppBar, Toolbar, Container, Stack, IconButton, InputBase } from '@material-ui/core';
 import CloseIcon from '@material-ui/icons/Close';
 import SearchIcon from '@material-ui/icons/Search';
 // hooks
@@ -61,7 +61,6 @@ const SearchBar = styled('form')(({ theme }) => ({
 
 export default function MainNavbar() {
   const isOffset = useOffSetTop(100);
-  const { pathname } = useLocation();
   // const isHome = pathname === '/';
   const isHome = false;
   const [searchValue, setSearchValue] = useState('');

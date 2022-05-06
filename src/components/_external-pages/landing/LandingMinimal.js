@@ -109,7 +109,6 @@ const CardIconStyle = styled('img')(({ theme }) => ({
 
 export default function LandingMinimalHelps() {
   const theme = useTheme();
-  const isLight = theme.palette.mode === 'light';
   const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
