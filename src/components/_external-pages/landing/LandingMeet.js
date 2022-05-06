@@ -1,9 +1,8 @@
 /* eslint-disable prettier/prettier */
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 // material
 import { experimentalStyled as styled } from '@material-ui/core/styles';
-import { Container, Typography, Stack, Grid, useTheme, Link, Box, Button, Menu, MenuItem } from '@material-ui/core';
+import { Container, Typography, Stack, useTheme, Box, Button } from '@material-ui/core';
 // routes
 //
 import { varWrapEnter } from '../../animate';
@@ -20,23 +19,6 @@ const RootStyle = styled(motion.div)(({ theme }) => ({
 
 export default function LandingMeet() {
   const theme = useTheme();
-  const GridStyle = styled((props) => <Grid container {...props} />)(({ theme }) => ({
-    // zIndex: 10,
-    // position: 'relative',
-    paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
-    [theme.breakpoints.up('lg')]: {
-        width: 'calc(100% + 50px)',
-        marginLeft: '-50px',
-        '&>div': {
-            paddingLeft: 50
-        }
-    },
-    [theme.breakpoints.down('lg')]: {
-      maxWidth: '550px',
-      margin: 'auto'
-    }
-  }));
   return (
     <>
       <RootStyle initial="initial" animate="animate" variants={varWrapEnter} id="meetalamnft">
