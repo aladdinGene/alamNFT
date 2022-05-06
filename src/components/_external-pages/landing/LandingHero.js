@@ -37,7 +37,7 @@ const HeroOverlayDiv1Style = styled(motion.div)({
   // background: 'linear-gradient(358deg, #ffffffdd, #ffffffcc, #ffffff00)',
   backgroundSize: 'cover',
   background: 'url("/static/home/hero-overaly-main.png")',
-  filter: 'blur(19px)',
+  filter: 'blur(5px)',
   opacity: '0.2 !important'
 });
 
@@ -45,7 +45,7 @@ const HeroOverlayDiv2Style = styled(motion.div)({
   zIndex: 9,
   objectFit: 'cover',
   position: 'absolute',
-  background: 'linear-gradient(358deg, #ffffffdd, #ffffffcc, #ffffff00)',
+  background: 'linear-gradient(358deg, #ffffffdd, #ffffff99, #ffffff00)',
   opacity: '1 !important',
   top: 0,
   bottom: '-20px',
@@ -85,7 +85,16 @@ export default function LandingHero() {
 
         <Container maxWidth="lg">
           <GridStyle container spacing={isDesktop ? 10 : 5}>
-            <Grid item xs={12} md={6}>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              sx={{
+                [theme.breakpoints.down('lg')]: {
+                  textAlign: 'center'
+                }
+              }}
+            >
               <motion.div variants={varFadeInRight}>
                 <Typography variant="h2" color={theme.palette.grey['900']}>
                   Discover, collect, and sell extraordinary NFTs
@@ -96,7 +105,16 @@ export default function LandingHero() {
               </motion.div>
 
               <motion.div variants={varFadeInRight}>
-                <Stack direction="row" spacing={2} mt={5}>
+                <Stack
+                  direction="row"
+                  spacing={2}
+                  mt={5}
+                  sx={{
+                    [theme.breakpoints.down('lg')]: {
+                      justifyContent: 'center'
+                    }
+                  }}
+                >
                   <Button
                     size="large"
                     variant="contained"
@@ -118,9 +136,16 @@ export default function LandingHero() {
                     Create
                   </Button>
                 </Stack>
-                <Stack mt={5}>
+                <Stack
+                  mt={5}
+                  sx={{
+                    [theme.breakpoints.down('lg')]: {
+                      justifyContent: 'center'
+                    }
+                  }}
+                >
                   <Link
-                    href="/#meetopensea"
+                    href="/#meetalamnft"
                     color="secondary"
                     sx={{
                       display: 'flex',
@@ -129,6 +154,9 @@ export default function LandingHero() {
                       '&:hover': {
                         textDecoration: 'none',
                         opacity: 0.7
+                      },
+                      [theme.breakpoints.down('lg')]: {
+                        justifyContent: 'center'
                       }
                     }}
                   >

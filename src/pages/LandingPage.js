@@ -9,7 +9,9 @@ import {
   LandingCategoryCarousel,
   LandingSolana,
   LandingTopCollections,
-  LandingTrending
+  LandingTrending,
+  LandingResources,
+  LandingMeet
 } from '../components/_external-pages/landing';
 
 // ----------------------------------------------------------------------
@@ -36,7 +38,9 @@ export default function LandingPage() {
         <LandingTopCollections />
         <LandingTrending />
         <LandingHugePackElements />
+        <LandingResources />
         <LandingMinimal />
+        <LandingMeet />
       </ContentStyle>
     </RootStyle>
   );

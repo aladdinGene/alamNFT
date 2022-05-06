@@ -10,3 +10,5 @@ export { default as LandingHotItems } from './LandingHotItems';
 export { default as LandingSolana } from './LandingSolana';
 export { default as LandingTopCollections } from './LandingTopCollections';
 export { default as LandingTrending } from './LandingTrending';
+export { default as LandingResources } from './LandingResources';
+export { default as LandingMeet } from './LandingMeet';
