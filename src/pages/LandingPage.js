@@ -9,7 +9,9 @@ import {
   LandingCategoryCarousel,
   LandingHotItems,
   LandingTopSellers,
-  LandingSolana
+  LandingSolana,
+  LandingTopCollections,
+  LandingTrending
 } from '../components/_external-pages/landing';
 
 // ----------------------------------------------------------------------
@@ -33,6 +35,8 @@ export default function LandingPage() {
       <ContentStyle>
         <LandingSolana />
         <LandingCategoryCarousel />
+        <LandingTopCollections />
+        <LandingTrending />
         <LandingHotItems />
         <LandingTopSellers />
         <LandingMinimal />

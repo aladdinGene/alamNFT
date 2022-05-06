@@ -11,34 +11,35 @@ import { MIconButton } from '../../@material-extend';
 
 const SIZE = 40;
 
-const RootStyle = styled('div')(({ theme }) => ({
+const RootStyle = styled('div')(() => ({
   top: 0,
   bottom: 0,
-  zIndex: 9,
+  zIndex: 19,
   height: SIZE,
-  width: '100%',
+  width: 'calc(100% + 40px)',
   margin: 'auto',
+  marginLeft: '-20px',
   display: 'flex',
   position: 'absolute',
-  padding: theme.spacing(0, 2),
+  padding: 0,
   justifyContent: 'space-between'
 }));
 
 const ArrowStyle = styled(MIconButton)(({ theme }) => ({
   width: SIZE,
   height: SIZE,
-  opacity: 0.48,
+  opacity: 1,
   display: 'flex',
   cursor: 'pointer',
   alignItems: 'center',
   justifyContent: 'center',
-  color: theme.palette.common.white,
-  background: theme.palette.grey[900],
-  borderRadius: theme.shape.borderRadiusSm,
-  transition: theme.transitions.create('opacity'),
+  color: theme.palette.grey[500],
+  background: theme.palette.common.white,
+  borderRadius: '50%',
   '&:hover': {
     opacity: 1,
-    background: theme.palette.grey[900]
+    background: theme.palette.common.white,
+    color: theme.palette.grey[900]
   }
 }));
 

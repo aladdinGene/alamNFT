@@ -137,7 +137,7 @@ function CarouselItem({ item }) {
   );
 }
 
-export default function LandingCategoryCarousel() {
+export default function LandingTrending() {
   const carouselRef = useRef();
   const theme = useTheme();
 

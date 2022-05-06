@@ -8,3 +8,5 @@ export { default as LandingCategoryCarousel } from './LandingCategoryCarousel';
 export { default as LandingTopSellers } from './LandingTopSellers';
 export { default as LandingHotItems } from './LandingHotItems';
 export { default as LandingSolana } from './LandingSolana';
+export { default as LandingTopCollections } from './LandingTopCollections';
+export { default as LandingTrending } from './LandingTrending';
