@@ -243,9 +243,6 @@ function CarouselItem({ item }) {
                 </Box>
             </Box>
         </Box>
-        <Typography variant="p" sx={{ position: 'absolute', top: 10, right: 10, border: 'solid 2px #EEE', borderRadius: 1, padding: '2px 10px', fontSize: '14px !important', color: '#FFFFFF', background: 'rgba(50, 50, 50, 0.5)' }}>
-          Live
-        </Typography>
       </Link>
     </Paper>
   );

@@ -22,40 +22,24 @@ import { CarouselControlsArrowsBasic2, CarouselControlsPaging2 } from '../../car
 
 const CAROUSELS = [
     {
-      image: '/static/nftImages/art.png',
-      title: 'Art'
+      image: '/static/home/nftstar-promocard.jpg',
+      title: '‘Every Body’ NFT Collection'
     },
     {
-      image: '/static/nftImages/collectibles.png',
-      title: 'Collectibles'
+      image: '/static/home/powerfuliceland-promocard.jpg',
+      title: '‘Every Body’ NFT Collection'
     },
     {
-      image: '/static/nftImages/domain-names.png',
-      title: 'Domain Names'
+      image: '/static/home/signsoftimes-promocard.jpg',
+      title: '‘Every Body’ NFT Collection'
     },
     {
-      image: '/static/nftImages/music.png',
-      title: 'Music'
+      image: '/static/home/surge-promocard.jpg',
+      title: '‘Every Body’ NFT Collection'
     },
     {
-      image: '/static/nftImages/photography-category.png',
-      title: 'Photography'
-    },
-    {
-      image: '/static/nftImages/sports.png',
-      title: 'Sports'
-    },
-    {
-      image: '/static/nftImages/trading-cards.png',
-      title: 'Trading Cards'
-    },
-    {
-      image: '/static/nftImages/utility.png',
-      title: 'Utility'
-    },
-    {
-      image: '/static/nftImages/virtual-worlds.png',
-      title: 'Virtual Worlds'
+      image: '/static/home/hmson-promocard.jpg',
+      title: '‘Every Body’ NFT Collection'
     }
   ];
 
