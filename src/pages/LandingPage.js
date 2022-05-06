@@ -8,7 +8,8 @@ import {
   LandingHugePackElements,
   LandingCategoryCarousel,
   LandingHotItems,
-  LandingTopSellers
+  LandingTopSellers,
+  LandingSolana
 } from '../components/_external-pages/landing';
 
 // ----------------------------------------------------------------------
@@ -30,6 +31,7 @@ export default function LandingPage() {
     <RootStyle title="The starting point for your next project | Minimal-UI" id="move_top">
       <LandingHero />
       <ContentStyle>
+        <LandingSolana />
         <LandingCategoryCarousel />
         <LandingHotItems />
         <LandingTopSellers />

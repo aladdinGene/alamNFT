@@ -7,3 +7,4 @@ export { default as LandingHugePackElements } from './LandingHugePackElements';
 export { default as LandingCategoryCarousel } from './LandingCategoryCarousel';
 export { default as LandingTopSellers } from './LandingTopSellers';
 export { default as LandingHotItems } from './LandingHotItems';
+export { default as LandingSolana } from './LandingSolana';

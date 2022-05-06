@@ -62,7 +62,8 @@ const SearchBar = styled('form')(({ theme }) => ({
 export default function MainNavbar() {
   const isOffset = useOffSetTop(100);
   const { pathname } = useLocation();
-  const isHome = pathname === '/';
+  // const isHome = pathname === '/';
+  const isHome = false;
   const [searchValue, setSearchValue] = useState('');
   const searchChange = (event) => {
     setSearchValue(event.target.value);
